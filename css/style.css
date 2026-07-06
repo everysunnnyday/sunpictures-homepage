@@ -179,7 +179,7 @@ em { font-style: normal; color: var(--accent); }
 .hero-video-wrap {
   position: relative;
   width: 100vw;                    /* 좌우 꽉 채움 */
-  flex: 0 0 60vh;                  /* 최상단(헤더 뒤)부터 채우고 세로 크롭 */
+  flex: 0 0 68vh;                  /* 최상단(헤더 뒤)부터 채우고 세로 크롭(덜 잘리게) */
   overflow: hidden;
   background: #000;
 }
@@ -575,7 +575,7 @@ em { font-style: normal; color: var(--accent); }
   }
   .hero { min-height: 100vh; }
   .hero-inner { height: 100vh; }
-  .hero-video-wrap { width: 100vw; flex: 0 0 52vh; }
+  .hero-video-wrap { width: 100vw; flex: 0 0 58vh; }
 
   /* 포트폴리오 모바일: 세로 정렬 (Museum 페이지 간격에 통일) */
   .portfolio-inner,
