@@ -19,7 +19,7 @@
 </head>
 <body>
 
-  <!-- ================= 헤더 ================= -->
+  <!-- ================= 헤더 (배경 없음 · 고정) ================= -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="#hero" class="logo" data-nav aria-label="SUN PICTURES 홈으로">
@@ -45,32 +45,32 @@
     <a href="#portfolio2" data-nav aria-label="포트폴리오 2"></a>
     <a href="#portfolio3" data-nav aria-label="포트폴리오 3"></a>
     <a href="#portfolio4" data-nav aria-label="포트폴리오 4"></a>
-    <a href="#client" data-nav aria-label="클라이언트 · 컨택트"></a>
+    <a href="#client" data-nav aria-label="클라이언트"></a>
+    <a href="#contact" data-nav aria-label="컨택트"></a>
   </nav>
 
   <!-- ================= 스크롤 컨테이너 ================= -->
   <main class="scroller" id="scroller">
 
-    <!-- ---------- 1. HERO ---------- -->
+    <!-- ---------- 1. HERO : 영상(축소) + 헤드카피 ---------- -->
     <section class="section hero" id="hero" data-section>
-      <div class="hero-video-wrap">
-        <!-- 배경 유튜브 영상: 자동재생·음소거·반복 -->
-        <iframe
-          id="heroVideo"
-          class="hero-video"
-          src="https://www.youtube-nocookie.com/embed/i7zak_wmTGI?autoplay=1&mute=1&loop=1&playlist=i7zak_wmTGI&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&disablekb=1"
-          title="SUN PICTURES 소개 영상"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-        <div class="hero-overlay"></div>
-      </div>
+      <div class="hero-inner">
+        <div class="hero-video-wrap">
+          <!-- 배경 유튜브 영상: 자동재생·음소거·반복 -->
+          <iframe
+            id="heroVideo"
+            class="hero-video"
+            src="https://www.youtube-nocookie.com/embed/i7zak_wmTGI?autoplay=1&mute=1&loop=1&playlist=i7zak_wmTGI&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&disablekb=1"
+            title="SUN PICTURES 소개 영상"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+        </div>
 
-      <div class="hero-copy">
-        <h1 class="hero-title">
-          <span class="line"><em>가치</em>가 닿을 수 있게, <em>진심</em>을 기록합니다</span>
-        </h1>
-        <p class="hero-sub">From <em>Concept</em> to <em>Color</em> &nbsp;——&nbsp; and now to <em>Code</em></p>
+        <div class="hero-copy">
+          <h1 class="hero-title"><em>가치</em>가 닿을 수 있게, <em>진심</em>을 기록합니다</h1>
+          <p class="hero-sub">From <em>Concept</em> to <em>Color</em><span class="hr-line"></span>and now to <em>Code</em></p>
+        </div>
       </div>
 
       <a href="#about" data-nav class="scroll-hint" aria-label="아래로 스크롤">
@@ -85,86 +85,92 @@
         <p class="eyebrow">ABOUT US</p>
         <h2 class="about-title">
           <span><em>가치</em>가 닿을 수 있게, <em>진심</em>을 기록합니다</span>
-          <span class="about-title-sub">From Concept to Color &nbsp;——&nbsp; and now to Code</span>
+          <span class="about-title-sub">From Concept to Color<span class="hr-line"></span>and now to Code</span>
         </h2>
         <div class="about-body">
-          <!-- 어바웃 문구: 수정 시 아래 <p> 내용만 교체 -->
-          <p>콘텐츠를 만드는 당신의 여정이 즐거운 경험이 되도록, 보는 사람의 마음에 오래 남을 이야기를 기획하고 세상을 더 나은 방향으로 움직이는 가치를 담습니다.</p>
-          <p>AI가 콘텐츠를 만드는 시대, 그래서 사람의 이야기가 더 중요해졌습니다. 기획, 연출, 촬영, 디자인, 편집, 모션그래픽, 색보정, 그리고 AI와 개발까지.</p>
+          <!-- 어바웃 문구: 수정 시 아래 <p> 내용만 교체 (줄바꿈은 <br>) -->
+          <p>콘텐츠를 만드는 당신의 여정이 즐거운 경험이 되도록,<br>보는 사람의 마음에 오래 남을 이야기를 기획하고<br>세상을 더 나은 방향으로 움직이는 가치를 담습니다.</p>
+          <p>AI가 콘텐츠를 만드는 시대, 그래서 사람의 이야기가 더 중요해졌습니다.<br>기획, 연출, 촬영, 디자인, 편집, 모션그래픽, 색보정, 그리고 AI와 개발까지.</p>
           <p class="about-em">사람의 진심에 새로운 기술을 더해, 콘텐츠의 경계를 넓혀갑니다.</p>
         </div>
       </div>
     </section>
 
-    <!-- ---------- 3. PORTFOLIO 1 ---------- -->
-    <section class="section portfolio" id="portfolio1" data-section
-             style="--bg:url('assets/img/portfolio_1.png')">
+    <!-- ---------- 3. PORTFOLIO 1 (좌측) ---------- -->
+    <section class="section portfolio left" id="portfolio1" data-section
+             style="background-image:url('assets/img/portfolio_1.png')">
       <div class="portfolio-overlay"></div>
-      <div class="section-inner portfolio-inner">
-        <p class="eyebrow light">PORTFOLIO</p>
-        <h2 class="pf-eng">Net Zero Documentary Storytelling</h2>
-        <!-- 포트폴리오1 제목/기간: 수정 가능 -->
-        <h3 class="pf-title">용인시 탄소중립 유튜브 채널 ‘용인을 바꾸는 시간’</h3>
-        <p class="pf-date">2023.09 – 2025.12</p>
-        <!-- 포트폴리오1 설명: 아래 내용 자유롭게 수정하세요 -->
-        <p class="pf-desc">용인시의 탄소중립 실현을 위해 기후 위기 대응 정보와 실생활에 유용한 탄소중립 라이프스타일을 제안하는 채널입니다. 일상에서 탄소중립을 실천할 수 있는 방법과 경제적인 노하우를 통해 지속 가능한 용인을 만드는 즐거운 변화의 시간을 공유합니다.</p>
+      <div class="portfolio-inner">
+        <p class="pf-eng">Net Zero Documentary Storytelling</p>
+        <div class="pf-details">
+          <!-- 포트폴리오1 제목/기간: 수정 가능 -->
+          <h3 class="pf-title">용인시 탄소중립 유튜브 채널 ‘용인을 바꾸는 시간’</h3>
+          <p class="pf-date">2023.09 – 2025.12</p>
+          <!-- 포트폴리오1 설명: 아래 내용 자유롭게 수정하세요 -->
+          <p class="pf-desc">용인시의 탄소중립 실현을 위해 기후 위기 대응 정보와 실생활에 유용한 탄소중립 라이프스타일을 제안하는 채널입니다. 일상에서 탄소중립을 실천할 수 있는 방법과 경제적인 노하우를 통해 지속 가능한 용인을 만드는 즐거운 변화의 시간을 공유합니다.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ---------- 4. PORTFOLIO 2 ---------- -->
-    <section class="section portfolio" id="portfolio2" data-section
-             style="--bg:url('assets/img/portfolio_2.png')">
+    <!-- ---------- 4. PORTFOLIO 2 (우측) ---------- -->
+    <section class="section portfolio right" id="portfolio2" data-section
+             style="background-image:url('assets/img/portfolio_2.png')">
       <div class="portfolio-overlay"></div>
-      <div class="section-inner portfolio-inner align-right">
-        <p class="eyebrow light">PORTFOLIO</p>
-        <h2 class="pf-eng">Drama Storytelling</h2>
-        <!-- 포트폴리오2 제목/기간: 수정 가능 -->
-        <h3 class="pf-title">경기도어린이박물관 ‘완벽한 하루’ 웹드라마 시리즈 6부작</h3>
-        <p class="pf-date">2025.04 – 2026.01</p>
-        <!-- 포트폴리오2 설명: 아래 내용 자유롭게 수정하세요 -->
-        <p class="pf-desc">초등학생들의 학업, 외모, 관계에 대한 고민을 주제로 아이들의 진솔한 속마음을 담아낸 6부작 웹드라마 시리즈. 현실을 바탕으로 한 스토리텔링을 통해 어린이의 주체적인 성장을 응원하고 세대 간의 깊은 공감을 이끌어내는 따뜻한 위로를 전합니다.</p>
+      <div class="portfolio-inner">
+        <p class="pf-eng">Drama Storytelling</p>
+        <div class="pf-details">
+          <!-- 포트폴리오2 제목/기간: 수정 가능 -->
+          <h3 class="pf-title">경기도어린이박물관 ‘완벽한 하루’ 웹드라마 시리즈 6부작</h3>
+          <p class="pf-date">2025.04 – 2026.01</p>
+          <!-- 포트폴리오2 설명: 아래 내용 자유롭게 수정하세요 -->
+          <p class="pf-desc">초등학생들의 학업, 외모, 관계에 대한 고민을 주제로 아이들의 진솔한 속마음을 담아낸 6부작 웹드라마 시리즈. 현실을 바탕으로 한 스토리텔링을 통해 어린이의 주체적인 성장을 응원하고 세대 간의 깊은 공감을 이끌어내는 따뜻한 위로를 전합니다.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ---------- 5. PORTFOLIO 3 ---------- -->
-    <section class="section portfolio" id="portfolio3" data-section
-             style="--bg:url('assets/img/portfolio_3.png')">
+    <!-- ---------- 5. PORTFOLIO 3 (좌우 분할) ---------- -->
+    <section class="section portfolio split" id="portfolio3" data-section
+             style="background-image:url('assets/img/portfolio_3.png')">
       <div class="portfolio-overlay"></div>
-      <div class="section-inner portfolio-inner">
-        <p class="eyebrow light">PORTFOLIO</p>
-        <h2 class="pf-eng">Museum Documentary Storytelling · Post Production</h2>
-        <!-- 포트폴리오3 제목/기간: 수정 가능 -->
-        <h3 class="pf-title">한양대학교박물관 ‘묻힌 그릇들은 아직 끝나지 않았다’</h3>
-        <p class="pf-date">2026.03 – 2026.04</p>
-        <!-- 포트폴리오3 설명: 아래 내용 자유롭게 수정하세요 -->
-        <p class="pf-desc">도자기의 ‘쓰레기’ 혹은 ‘유물’로 정의되는 판단의 경계를 추적하여, 파편 속에 깃든 사회적 시선과 개인의 기억을 인문학적인 통찰로 기록했습니다. 행당동 폐기유적부터 묻힌 할머니의 도자기까지 물질의 여정을 정제된 다큐멘터리 서사로 시각화한 깊은 울림을 주는 영상 프로젝트입니다.</p>
+      <div class="portfolio-inner">
+        <p class="pf-eng">Museum<br>Documentary Storytelling</p>
+        <div class="pf-bottom-row">
+          <div class="pf-details">
+            <!-- 포트폴리오3 제목/기간: 수정 가능 -->
+            <h3 class="pf-title">한양대학교박물관 ‘묻힌 그릇들은 아직 끝나지 않았다’</h3>
+            <p class="pf-sub">- Post Production</p>
+            <p class="pf-date">2026.03 – 2026.04</p>
+          </div>
+          <!-- 포트폴리오3 설명: 아래 내용 자유롭게 수정하세요 -->
+          <p class="pf-desc">도자기의 ‘쓰레기’ 혹은 ‘유물’로 정의되는 판단의 경계를 추적하여, 파편 속에 깃든 사회적 시선과 개인의 기억을 인문학적인 통찰로 기록했습니다. 행당동 폐기유적부터 묻힌 할머니의 도자기까지 물질의 여정을 정제된 다큐멘터리 서사로 시각화한 깊은 울림을 주는 영상 프로젝트입니다.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ---------- 6. PORTFOLIO 4 ---------- -->
-    <section class="section portfolio" id="portfolio4" data-section
-             style="--bg:url('assets/img/portfolio_4.png')">
+    <!-- ---------- 6. PORTFOLIO 4 (우측) ---------- -->
+    <section class="section portfolio right" id="portfolio4" data-section
+             style="background-image:url('assets/img/portfolio_4.png')">
       <div class="portfolio-overlay"></div>
-      <div class="section-inner portfolio-inner align-right">
-        <p class="eyebrow light">PORTFOLIO</p>
-        <h2 class="pf-eng">Smart City Documentary Storytelling</h2>
-        <!-- 포트폴리오4 제목/기간: 수정 가능 -->
-        <h3 class="pf-title">연세대학교 산학협력단 인천 스마트시티 리빙랩 프로젝트</h3>
-        <p class="pf-date">2019.04 – 2024.04</p>
-        <!-- 포트폴리오4 설명: 아래 내용 자유롭게 수정하세요 -->
-        <p class="pf-desc">인터뷰를 바탕으로 도시 환경을 개선해 나가는 시민 주도형 리빙랩의 역동적인 과정을 다큐멘터리 형식으로 기록했습니다. 혁신 기술이 실제 삶에 녹아드는 스마트시티 실증 현장을 세밀한 시선으로 담아내어, 기술과 사람이 공존하는 지속 가능한 도시의 가치를 전달합니다.</p>
+      <div class="portfolio-inner">
+        <p class="pf-eng">Smart City Documentary Storytelling</p>
+        <div class="pf-details">
+          <!-- 포트폴리오4 제목/기간: 수정 가능 -->
+          <h3 class="pf-title">연세대학교 산학협력단 인천 스마트시티 리빙랩 프로젝트</h3>
+          <p class="pf-date">2019.04 – 2024.04</p>
+          <!-- 포트폴리오4 설명: 아래 내용 자유롭게 수정하세요 -->
+          <p class="pf-desc">인터뷰를 바탕으로 도시 환경을 개선해 나가는 시민 주도형 리빙랩의 역동적인 과정을 다큐멘터리 형식으로 기록했습니다. 혁신 기술이 실제 삶에 녹아드는 스마트시티 실증 현장을 세밀한 시선으로 담아내어, 기술과 사람이 공존하는 지속 가능한 도시의 가치를 전달합니다.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ---------- 7. CLIENT + CONTACT ---------- -->
-    <section class="section client-contact" id="client" data-section>
-      <div class="client-block">
+    <!-- ---------- 7. CLIENT (독립 섹션) ---------- -->
+    <section class="section client" id="client" data-section>
+      <div class="section-inner client-inner">
         <p class="eyebrow">CLIENT</p>
         <h2 class="cc-title">함께한 클라이언트</h2>
-        <!-- 자동 슬라이딩 마퀴: 동일 트랙 2벌 복제(끊김 없는 무한 루프) / 마우스 오버 시 정지 -->
+        <!-- 자동 슬라이딩 마퀴: JS가 트랙을 복제해 끊김 없는 무한 루프 / 마우스 오버 시 정지 -->
         <div class="marquee" id="marquee">
           <div class="marquee-track">
-            <!-- 로고 세트 (JS가 자동 복제) -->
             <img src="assets/client/경기도어린이박물관.png" alt="경기도어린이박물관" />
             <img src="assets/client/용인시.png" alt="용인시" />
             <img src="assets/client/연세대.png" alt="연세대학교" />
@@ -184,42 +190,46 @@
             <img src="assets/client/히야.png" alt="HYAAH" />
             <img src="assets/client/416.png" alt="4.16재단" />
             <img src="assets/client/CS.png" alt="CS" />
-            <img src="assets/client/LS.png" alt="LS" />
+            <img src="assets/client/LS.png" alt="LS Electric" />
             <img src="assets/client/doit5.png" alt="Do it" />
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="contact-block" id="contact">
-        <p class="eyebrow">CONTACT</p>
-        <h2 class="cc-title">프로젝트 문의하기</h2>
-        <p class="contact-lead">아래 양식을 남겨주시면 <strong>sunpic@sunpictures.co.kr</strong> 로 전달됩니다. 빠르게 회신드리겠습니다.</p>
+    <!-- ---------- 8. CONTACT + 푸터 (독립 섹션) ---------- -->
+    <section class="section contact-section" id="contact" data-section>
+      <div class="contact-wrap">
+        <div class="contact-block">
+          <p class="eyebrow">CONTACT</p>
+          <h2 class="cc-title">프로젝트 문의하기</h2>
+          <p class="contact-lead">아래 양식을 남겨주시면 <strong>sunpic@sunpictures.co.kr</strong> 로 전달됩니다. 빠르게 회신드리겠습니다.</p>
 
-        <!-- Web3Forms: 무료 폼→메일. access_key를 발급받아 아래 value에 붙여넣으세요 (README 참고). -->
-        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="df46d4ac-df10-4157-b06c-9c92e394b0fc" />
-          <input type="hidden" name="subject" value="[홈페이지 문의] 새 문의가 도착했습니다" />
-          <input type="hidden" name="from_name" value="SUN PICTURES 홈페이지" />
-          <!-- 스팸 방지 honeypot (사람 눈에 안 보임) -->
-          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" />
+          <!-- Web3Forms 연동 완료 (access_key 등록됨) -->
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="df46d4ac-df10-4157-b06c-9c92e394b0fc" />
+            <input type="hidden" name="subject" value="[홈페이지 문의] 새 문의가 도착했습니다" />
+            <input type="hidden" name="from_name" value="SUN PICTURES 홈페이지" />
+            <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" />
 
-          <div class="field-row">
+            <div class="field-row">
+              <label class="field">
+                <span>이름 / 회사명 <i>*</i></span>
+                <input type="text" name="이름_회사명" required placeholder="홍길동 / (주)00" />
+              </label>
+              <label class="field">
+                <span>연락처 (이메일 또는 전화) <i>*</i></span>
+                <input type="text" name="연락처" required placeholder="name@email.com / 010-0000-0000" />
+              </label>
+            </div>
             <label class="field">
-              <span>이름 / 회사명 <i>*</i></span>
-              <input type="text" name="이름_회사명" required placeholder="홍길동 / (주)00" />
+              <span>문의 내용 <i>*</i></span>
+              <textarea name="문의내용" rows="4" required placeholder="프로젝트 종류, 일정, 예산 등을 자유롭게 남겨주세요."></textarea>
             </label>
-            <label class="field">
-              <span>연락처 (이메일 또는 전화) <i>*</i></span>
-              <input type="text" name="연락처" required placeholder="name@email.com / 010-0000-0000" />
-            </label>
-          </div>
-          <label class="field">
-            <span>문의 내용 <i>*</i></span>
-            <textarea name="문의내용" rows="5" required placeholder="프로젝트 종류, 일정, 예산 등을 자유롭게 남겨주세요."></textarea>
-          </label>
-          <button type="submit" class="submit-btn">문의 보내기</button>
-          <p class="form-result" id="formResult" role="status" aria-live="polite"></p>
-        </form>
+            <button type="submit" class="submit-btn">문의 보내기</button>
+            <p class="form-result" id="formResult" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
 
       <!-- ---------- 푸터 ---------- -->

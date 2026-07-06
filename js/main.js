@@ -73,12 +73,10 @@
   });
 
   /* -------- 스크롤 상태: 헤더/도트/활성 메뉴 갱신 -------- */
-  const lightSections = new Set(["about", "client"]); // 밝은 배경 섹션 id
+  const lightSections = new Set(["about", "client", "contact"]); // 밝은 배경 섹션 id
   function onScroll() {
     const idx = currentIndex();
     const id = sections[idx].id;
-
-    header.classList.toggle("solid", scroller.scrollTop > 40);
 
     // 활성 메뉴 (PORTFOLIO는 portfolio*가 활성일 때)
     gnbLinks.forEach((a) => {
@@ -88,8 +86,10 @@
     });
     dotLinks.forEach((a, i) => a.classList.toggle("active", i === idx));
 
-    // 밝은 섹션 위에서는 도트를 어둡게
-    dotNav.classList.toggle("on-light", lightSections.has(id));
+    // 밝은 섹션 위에서는 헤더/도트 글자를 어둡게
+    const onLight = lightSections.has(id);
+    dotNav.classList.toggle("on-light", onLight);
+    header.classList.toggle("on-light", onLight);
   }
   let ticking = false;
   scroller.addEventListener("scroll", function () {
