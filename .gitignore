@@ -1,0 +1,10 @@
+# 원본 자료(사업자등록증 등 민감 문서 포함) — 절대 공개 저장소에 올리지 않음
+resource/
+
+# 로컬 개발 도구 설정
+.claude/
+
+# OS 잡파일
+Thumbs.db
+desktop.ini
+.DS_Store
