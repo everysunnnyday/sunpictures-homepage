@@ -65,7 +65,7 @@ em { font-style: normal; color: var(--accent); }
   justify-content: space-between;
 }
 .logo img {
-  height: 46px;                    /* 로고 확대 */
+  height: 56px;                    /* 로고 확대 */
   width: auto;
   display: block;
   transition: filter .3s var(--ease);
@@ -172,26 +172,24 @@ em { font-style: normal; color: var(--accent); }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(24px, 4vh, 46px);
+  gap: clamp(22px, 4vh, 44px);
   width: 100%;
 }
 .hero-video-wrap {
   position: relative;
-  width: min(82vw, 900px);
-  aspect-ratio: 16 / 9;
-  max-height: 58vh;
+  width: 100vw;                    /* 좌우 꽉 채움 */
+  height: 56vh;                    /* 세로는 축소 → 크롭 */
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 30px 80px rgba(0,0,0,.5);
   background: #000;
 }
 .hero-video {
   position: absolute;
   top: 50%; left: 50%;
-  width: 100%; height: 100%;
-  /* 16:9 컨테이너를 꽉 채우도록 확대(레터박스 제거) */
-  min-width: 177.78%;              /* 높이가 캡될 때 폭 확보 */
+  /* 16:9 영상을 폭 기준으로 채우고 세로를 크롭(cover) */
+  width: 100vw;
+  height: 56.25vw;                 /* 100vw 기준 16:9 높이 */
   min-height: 100%;
+  min-width: 177.78vh;             /* 세로 기준으로도 항상 폭을 채움 */
   transform: translate(-50%, -50%);
   pointer-events: none;
   border: 0;
@@ -311,9 +309,12 @@ em { font-style: normal; color: var(--accent); }
   padding: calc(var(--header-h) + 20px) 60px 68px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: clamp(26px, 9vh, 92px);
   text-shadow: 0 2px 20px rgba(0,0,0,.55);
 }
+/* 분할(Museum)은 영문제목 위 / 하단행 아래로 더 넓게 */
+.portfolio.split .portfolio-inner { gap: clamp(40px, 16vh, 150px); }
 .portfolio.left  .portfolio-inner { align-items: flex-start; text-align: left; }
 .portfolio.right .portfolio-inner { align-items: flex-end;  text-align: right; }
 .portfolio.split .portfolio-inner { align-items: stretch; text-align: left; }
@@ -373,34 +374,32 @@ em { font-style: normal; color: var(--accent); }
   margin-bottom: 44px;
 }
 
-/* --- 마퀴 --- */
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+/* --- 클라이언트 로고 그리드 (페이지를 채움) --- */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(18px, 3vw, 44px) clamp(20px, 3vw, 40px);
+  align-items: center;
+  justify-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
 }
-.marquee-track {
+.client-grid span {
   display: flex;
   align-items: center;
-  gap: 64px;
-  width: max-content;
-  animation: marquee 48s linear infinite;
+  justify-content: center;
+  width: 100%;
+  height: clamp(56px, 8vh, 84px);
 }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track img {
-  height: 62px;          /* 4:1.5 비율 로고 → 높이 고정, 너비 auto */
+.client-grid img {
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
   object-fit: contain;
-  flex: 0 0 auto;
-  opacity: .82;
+  opacity: .85;
   transition: opacity .25s, transform .25s;
 }
-.marquee-track img:hover { opacity: 1; transform: scale(1.06); }
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
+.client-grid img:hover { opacity: 1; transform: scale(1.06); }
 
 /* ===================== 8. CONTACT + 푸터 ===================== */
 .contact-section {
@@ -467,10 +466,9 @@ em { font-style: normal; color: var(--accent); }
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform .2s var(--ease), background .2s;
-  box-shadow: 0 8px 22px rgba(247,93,51,.28);
+  transition: background .2s;      /* 플랫: 그림자 제거 */
 }
-.submit-btn:hover { transform: translateY(-2px); background: #ee4e22; }
+.submit-btn:hover { background: #ee4e22; }
 .submit-btn:disabled { opacity: .6; cursor: default; transform: none; }
 .form-result {
   margin-top: 14px;
@@ -481,12 +479,13 @@ em { font-style: normal; color: var(--accent); }
 .form-result.ok  { color: #1f8a4c; }
 .form-result.err { color: #d23f2f; }
 
-/* 푸터 */
+/* 푸터 (컬러 없음 - 컨택트 배경과 동일, 어두운 글자) */
 .site-footer {
   width: 100%;
-  background: var(--dark);
-  color: rgba(255,255,255,.7);
-  padding: 24px 0 22px;
+  background: transparent;
+  color: var(--text-soft);
+  padding: 22px 0 22px;
+  border-top: 1px solid rgba(0,0,0,.08);
 }
 .footer-inner {
   max-width: 1240px;
@@ -497,14 +496,15 @@ em { font-style: normal; color: var(--accent); }
   align-items: center;
   gap: 10px 30px;
 }
-.footer-brand img { height: 28px; width: auto; }
-.footer-info { font-size: 12.5px; line-height: 1.75; }
+.footer-brand img { height: 30px; width: auto; }
+.footer-info { font-size: 12.5px; line-height: 1.75; color: var(--text-soft); }
 .footer-info p { margin: 0; }
+.footer-info strong { color: var(--dark); }
 .footer-info a { color: var(--accent); }
 .copyright {
   margin-left: auto;
   font-size: 12px;
-  color: rgba(255,255,255,.45);
+  color: #9a938c;
   letter-spacing: .04em;
 }
 
@@ -539,7 +539,7 @@ em { font-style: normal; color: var(--accent); }
     padding-bottom: 40px;
   }
   .hero { min-height: 100vh; }
-  .hero-video-wrap { width: 92vw; max-height: none; }
+  .hero-video-wrap { width: 100vw; height: 42vh; }
 
   /* 포트폴리오 모바일: 세로 정렬 */
   .portfolio-inner {
@@ -562,8 +562,8 @@ em { font-style: normal; color: var(--accent); }
   .contact-section { height: auto; min-height: 100vh; }
   .footer-inner { justify-content: center; text-align: center; }
   .copyright { margin: 8px auto 0; }
-  .marquee-track { gap: 42px; }
-  .marquee-track img { height: 46px; }
+  .client-grid { grid-template-columns: repeat(3, 1fr); gap: 24px 18px; }
+  .client-grid span { height: 54px; }
 }
 
 @media (max-width: 520px) {

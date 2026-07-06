@@ -18,12 +18,6 @@
 
   const isDesktop = () => window.matchMedia("(min-width: 901px)").matches;
 
-  /* -------- 클라이언트 마퀴: 트랙 복제로 무한 루프 -------- */
-  const track = document.querySelector(".marquee-track");
-  if (track) {
-    track.innerHTML += track.innerHTML; // 2벌 → CSS translateX(-50%)로 자연 순환
-  }
-
   /* -------- 섹션 인덱스 계산 -------- */
   function currentIndex() {
     const y = scroller.scrollTop;
