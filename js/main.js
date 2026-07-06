@@ -127,10 +127,15 @@
       btn.disabled = true;
 
       try {
+        // 한글 깨짐 방지: multipart 대신 JSON(UTF-8)으로 전송
+        const payload = Object.fromEntries(new FormData(form).entries());
         const res = await fetch(form.action, {
           method: "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(form),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
         });
         const data = await res.json();
         if (data.success) {

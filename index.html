@@ -224,6 +224,10 @@
               <span>문의 내용 <i>*</i></span>
               <textarea name="문의내용" rows="4" required placeholder="프로젝트 종류, 일정, 예산 등을 자유롭게 남겨주세요."></textarea>
             </label>
+            <label class="consent">
+              <input type="checkbox" name="개인정보수집동의" value="동의함" required />
+              <span>개인정보 수집·이용에 동의합니다. <small>(수집 항목: 이름, 이메일 &middot; 이용 목적: 문의 응대 &middot; 보유 기간: 문의 처리 후 파기)</small></span>
+            </label>
             <button type="submit" class="submit-btn">문의 보내기</button>
             <p class="form-result" id="formResult" role="status" aria-live="polite"></p>
           </form>
