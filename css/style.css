@@ -356,10 +356,17 @@ em { font-style: normal; color: var(--accent); }
 }
 .pf-date {
   font-size: 14px;
-  color: var(--accent);
-  font-weight: 600;
+  color: rgba(255,255,255,.72);   /* 강조컬러 제거 → 뉴트럴 */
+  font-weight: 500;
   letter-spacing: .05em;
   margin-bottom: 20px;
+}
+/* Museum: 'Post Production' 뒤에 날짜를 한 줄로 */
+.pf-sub .pf-date-inline {
+  margin-left: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,.72);
+  letter-spacing: .05em;
 }
 .pf-desc {
   font-size: clamp(14px, 1.15vw, 16px);
